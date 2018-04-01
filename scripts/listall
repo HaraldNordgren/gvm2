@@ -140,7 +140,7 @@ list_all() {
         else
             printf "%s\n" "${_version/ }"
         fi
-    done
+    done | sort -t. -k 1,1n -k 2,2n -k 3,3n
     unset _version
 
     if [[ "${opt_porcelain}" == false ]]
